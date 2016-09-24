@@ -1,6 +1,6 @@
 <?php
     require '../includes/core/base.php';
-    $pageTitle = 'Music by Ben Barden';
+    $pageTitle = 'Albums - GFD Music';
     require '../includes/core/header.php';
 ?>
 
@@ -45,6 +45,12 @@
                     <td>11</td>
                     <td>54 minutes</td>
                 </tr>
+                <tr>
+                    <td><a href="/albums/revisited/">Revisited</a> - <em>compilation</em></td>
+                    <td>started September 2016</td>
+                    <td>ongoing</td>
+                    <td>ongoing</td>
+                </tr>
                 </tbody>
             </table>
 <?php
@@ -54,14 +60,19 @@
         <div class="col-md-6">
             <h2>Albums</h2>
             <div class="row" style="margin-top: 10px;">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <a href="/albums/symmetry-1/">
-                        <img src="/assets/img/albums/symmetry-1-cover-250px.png" alt="Symmetry 1" style="border: 0; height: 200px; width: 200px;">
+                        <img src="/assets/img/albums/symmetry-1-cover-250px.png" alt="Symmetry 1" style="border: 0; height: 150px; width: 150px;">
                     </a>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <a href="/albums/symmetry-2/">
-                        <img src="/assets/img/albums/symmetry-2-cover-250px.png" alt="Symmetry 2" style="border: 0; height: 200px; width: 200px;">
+                        <img src="/assets/img/albums/symmetry-2-cover-250px.png" alt="Symmetry 2" style="border: 0; height: 150px; width: 150px;">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="/albums/revisited/">
+                        <img src="/assets/img/albums/gfd-revisited-250px.jpg" alt="Revisited" style="border: 0; height: 150px; width: 150px;">
                     </a>
                 </div>
             </div>

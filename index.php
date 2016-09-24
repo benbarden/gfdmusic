@@ -32,6 +32,7 @@
             <ul>
                 <li><a href="albums/symmetry-1/">Symmetry 1</a></li>
                 <li><a href="albums/symmetry-2/">Symmetry 2</a></li>
+                <li><a href="albums/revisited/">Revisited</a> - <em>compilation</em></li>
             </ul>
         </div>
         <div class="col-md-4 portfolio-item">

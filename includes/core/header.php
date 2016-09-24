@@ -64,6 +64,9 @@
                     <a href="/albums">Albums</a>
                 </li>
                 <li>
+                    <a href="/albums/revisited/">Revisited</a>
+                </li>
+                <li>
                     <a href="/about">About</a>
                 </li>
             </ul>
