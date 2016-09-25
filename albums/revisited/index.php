@@ -72,7 +72,7 @@
     require '../../includes/core/scripts.php';
     require '../../includes/player/base.php';
 ?>
-<script src="/assets/js/albums/revisited.js?v=1"></script>
+<script src="/assets/js/albums/revisited.js?v=1a"></script>
 <?php
     require '../../includes/core/footer.php';
 ?>
