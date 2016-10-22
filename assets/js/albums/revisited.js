@@ -17,5 +17,10 @@ bbMusicTracklist.push({
 bbMusicTracklist.push({
     title: "04. Somewhere There (Revisited Remix)",
     mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('04. Somewhere There (Revisited Remix).mp3'),
-    duration: "3.39"
+    duration: "3:39"
+});
+bbMusicTracklist.push({
+    title: "05. Subterranean Labyrinth (Revisited Remix)",
+    mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('05. Subterranean Labyrinth (Revisited Remix).mp3'),
+    duration: "3:34"
 });
