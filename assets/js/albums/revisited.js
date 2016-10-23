@@ -24,3 +24,8 @@ bbMusicTracklist.push({
     mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('05. Subterranean Labyrinth (Revisited Remix).mp3'),
     duration: "3:34"
 });
+bbMusicTracklist.push({
+    title: "06. The Music Box (Revisited Remix)",
+    mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('06. The Music Box (Revisited Remix).mp3'),
+    duration: "2:47"
+});
