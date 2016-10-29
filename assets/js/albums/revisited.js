@@ -29,3 +29,8 @@ bbMusicTracklist.push({
     mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('06. The Music Box (Revisited Remix).mp3'),
     duration: "2:47"
 });
+bbMusicTracklist.push({
+    title: "07. Green Fields (Revisited Remix)",
+    mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('07. Green Fields (Revisited Remix).mp3'),
+    duration: "2:42"
+});
