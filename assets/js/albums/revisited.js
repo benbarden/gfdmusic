@@ -34,3 +34,8 @@ bbMusicTracklist.push({
     mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('07. Green Fields (Revisited Remix).mp3'),
     duration: "2:42"
 });
+bbMusicTracklist.push({
+    title: "08. Descendance (Revisited Remix)",
+    mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('08. Descendance (Revisited Remix).mp3'),
+    duration: "2:54"
+});

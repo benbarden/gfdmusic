@@ -24,14 +24,14 @@
     <div class="row">
         <div class="col-md-6">
             <p>
-                <em>Revisited</em> is a compilation of tracks written by Ben Barden betweeen 2005-2009. Some of the
-                tracks will be remixed; others will be revived in their original format. Each track will be
-                announced with an accompanying post on the
+                <em>Revisited</em> is a compilation of tracks written by Ben Barden betweeen 2005-2009,
+                remixed with new instruments and melodies. Each track will be announced with an
+                accompanying post on the
                 <a href="https://gfdmusicblog.wordpress.com/" target="_blank">GFD Music Blog</a>.
             </p>
             <p>
-                Once most of the tracks from this period have been covered, we'll revisit some of the tracks from
-                <em>Symmetry 1</em> and <em>Symmetry 2</em>. Finally, it'll be onto the forthcoming album -
+                After covering some of the tracks from this period, it'll be onto the best of
+                <em>Symmetry 1</em> and <em>Symmetry 2</em>, before finally getting to the upcoming album -
                 <em>Voyage into Space</em>.
             </p>
             <table class="table-striped table-condensed" style="width: 100%;">
@@ -72,7 +72,7 @@
     require '../../includes/core/scripts.php';
     require '../../includes/player/base.php';
 ?>
-<script src="/assets/js/albums/revisited.js?v=7"></script>
+<script src="/assets/js/albums/revisited.js?v=8a"></script>
 <?php
     require '../../includes/core/footer.php';
 ?>
