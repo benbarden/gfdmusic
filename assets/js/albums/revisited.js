@@ -39,3 +39,8 @@ bbMusicTracklist.push({
     mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('08. Descendance (Revisited Remix).mp3'),
     duration: "2:54"
 });
+bbMusicTracklist.push({
+    title: "09. Eternal Evolution (Revisited Remix)",
+    mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('09. Eternal Evolution (Revisited Remix).mp3'),
+    duration: "3:12"
+});
