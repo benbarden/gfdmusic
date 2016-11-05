@@ -44,3 +44,8 @@ bbMusicTracklist.push({
     mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('09. Eternal Evolution (Revisited Remix).mp3'),
     duration: "3:12"
 });
+bbMusicTracklist.push({
+    title: "10. Aries (Revisited Remix)",
+    mp3: "http://coda.city/downloads/gfdmusic/revisited/" + encodeURI('10. Aries (Revisited Remix).mp3'),
+    duration: "6:43"
+});
