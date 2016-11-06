@@ -5,7 +5,7 @@ bbMusicTracklist.push({
     duration: "4:25"
 });
 bbMusicTracklist.push({
-    title: "02. Low Gravity (2015 remix)",
+    title: "02. Low Gravity (GFD remix)",
     mp3: "http://coda.city/downloads/gfdmusic/symmetry-2/" + encodeURI('02. Low Gravity (GFD remix).mp3'),
     duration: "3:59"
 });
@@ -25,7 +25,7 @@ bbMusicTracklist.push({
     duration: "2:48"
 });
 bbMusicTracklist.push({
-    title: "06. Subterranean Labyrinth (2015 remix)",
+    title: "06. Subterranean Labyrinth (GFD remix)",
     mp3: "http://coda.city/downloads/gfdmusic/symmetry-2/" + encodeURI('06. Subterranean Labyrinth (GFD remix).mp3'),
     duration: "3:31"
 });
@@ -45,7 +45,7 @@ bbMusicTracklist.push({
     duration: "5:56"
 });
 bbMusicTracklist.push({
-    title: "10. Aries Part 3 (2015 remix)",
+    title: "10. Aries Part 3 (GFD remix)",
     mp3: "http://coda.city/downloads/gfdmusic/symmetry-2/" + encodeURI('10. Aries Part 3 (GFD remix).mp3'),
     duration: "6:13"
 });

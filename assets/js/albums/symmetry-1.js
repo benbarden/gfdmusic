@@ -5,7 +5,7 @@ bbMusicTracklist.push({
     duration: "3:30"
 });
 bbMusicTracklist.push({
-    title: "02. Circumference (2015 remix)",
+    title: "02. Circumference (GFD remix)",
     mp3: "http://coda.city/downloads/gfdmusic/symmetry-1/" + encodeURI('02. Circumference (GFD remix).mp3'),
     duration: "4:11"
 });
@@ -25,7 +25,7 @@ bbMusicTracklist.push({
     duration: "4:42"
 });
 bbMusicTracklist.push({
-    title: "06. Measure an infinite distance (2015 remix)",
+    title: "06. Measure an infinite distance (GFD remix)",
     mp3: "http://coda.city/downloads/gfdmusic/symmetry-1/" + encodeURI('06. Measure an infinite distance (GFD remix).mp3'),
     duration: "4:04"
 });
@@ -45,7 +45,7 @@ bbMusicTracklist.push({
     duration: "3:58"
 });
 bbMusicTracklist.push({
-    title: "10. Take Me Downstairs (2016 remix)",
+    title: "10. Take Me Downstairs (GFD remix)",
     mp3: "http://coda.city/downloads/gfdmusic/symmetry-1/" + encodeURI('10. Take Me Downstairs (GFD remix).mp3'),
     duration: "3:25"
 });

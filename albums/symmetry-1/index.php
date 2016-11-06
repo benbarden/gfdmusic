@@ -65,7 +65,7 @@
     require '../../includes/core/scripts.php';
     require '../../includes/player/base.php';
 ?>
-<script src="/assets/js/albums/symmetry-1.js"></script>
+<script src="/assets/js/albums/symmetry-1.js?v=2"></script>
 <?php
     require '../../includes/core/footer.php';
 ?>
