@@ -34,6 +34,9 @@
                 <em>Symmetry 1</em> and <em>Symmetry 2</em>, before finally getting to the upcoming album -
                 <em>Voyage into Space</em>.
             </p>
+            <p>
+                All tracks listed below are available as a new <em>Revisited Remix</em>.
+            </p>
             <table class="table-striped table-condensed" style="width: 100%;">
                 <thead>
                 <tr>
@@ -72,7 +75,7 @@
     require '../../includes/core/scripts.php';
     require '../../includes/player/base.php';
 ?>
-<script src="/assets/js/albums/revisited.js?v=12"></script>
+<script src="/assets/js/albums/revisited.js?v=12a"></script>
 <?php
     require '../../includes/core/footer.php';
 ?>
