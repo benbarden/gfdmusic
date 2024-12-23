@@ -37,10 +37,34 @@
         </div>
         <div class="col">
             {% if Release.artwork_local_url %}
-                <img src="{{ Release.artwork_local_url }}" class="bd-placeholder-img" width="200" height="250" alt="Cover artwork for {{ Release.name }}">
+                <img src="{{ Release.artwork_local_url }}" class="bd-placeholder-img" width="250" height="250" alt="Cover artwork for {{ Release.name }}">
             {% endif %}
         </div>
     </div>
+
+    <h3>Tracks</h3>
+    {% if Release.releaseTracks|length %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Track</th>
+                </tr>
+            </thead>
+            {% for item in Release.releaseTracks %}
+                <tr>
+                    <td>{{ item.release_order }}</td>
+                    <td>
+                        <a href="{{ route('track.show', {'trackUrl': item.track.url, 'artistUrl': item.track.artist.url}) }}">{{ item.track.name }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>
+            This release doesn't have any tracks...
+        </p>
+    {% endif %}
 
     {% if SpotifyTrackId %}
         <h2>Spotify</h2>
