@@ -1,0 +1,103 @@
+{% extends 'layouts/base.twig' %}
+
+{% block layout_header_custom %}
+
+{% endblock layout_header_custom %}
+
+{% block layout_featured %}
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                {% if LatestRelease %}
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Latest release</strong>
+                        <h3 class="mb-0">{{ LatestRelease.name }}</h3>
+                        <div class="mb-1 text-muted">Released: {{ LatestRelease.release_date|date('M d, Y') }}</div>
+                        <div class="mb-1 text-muted">Artist: {{ LatestRelease.artist.name }}</div>
+                        <p class="mb-auto"></p>
+                        <a href="{{ route('release.show', {'releaseUrl': LatestRelease.url, 'artistUrl': LatestRelease.artist.url}) }}" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        {% if LatestRelease.artwork_local_url %}
+                            <img src="{{ LatestRelease.artwork_local_url }}" class="bd-placeholder-img" width="200" height="250" alt="Cover artwork for {{ LatestRelease.name }}">
+                        {% else %}
+                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"/>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">Error loading latest release.</strong>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#55595c"/>
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                        </svg>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Latest album</strong>
+                    <h3 class="mb-0">Mind the Gap</h3>
+                    <div class="mb-1 text-muted">Apr 5, 2024</div>
+                    <p class="card-text mb-auto">GFD's fourth album.</p>
+                    <a href="#" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"/>
+                        <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock layout_featured %}
+
+{% block page_body %}
+
+    <h3 class="pb-4 mb-4 border-bottom">
+        Previous updates
+    </h3>
+
+    <article class="blog-post">
+        <h2 class="blog-post-title">Alive</h2>
+        <p class="blog-post-meta">Aug 9, 2024</p>
+        <p>
+            Funky vibes.
+        </p>
+    </article>
+
+    <article class="blog-post">
+        <h2 class="blog-post-title">Take it Slow</h2>
+        <p class="blog-post-meta">Jun 7, 2024</p>
+        <p>
+            Funky vibes.
+        </p>
+    </article>
+
+    <article class="blog-post">
+        <h2 class="blog-post-title">I Just Wanna Be With You</h2>
+        <p class="blog-post-meta">May 10, 2024</p>
+        <p>
+            Funky vibes.
+        </p>
+    </article>
+
+    {#
+    <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+    </nav>
+    #}
+
+{% endblock page_body %}

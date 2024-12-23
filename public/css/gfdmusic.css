@@ -1,0 +1,45 @@
+/* GFD Music */
+
+body, footer, .navbar {
+    background: #2e4daa;
+}
+
+.container {
+    background: #ffffff;
+}
+
+.gfd-bg-blue {
+    background: #2e4daa;
+}
+
+.gfd-bg-welcome {
+    background: #becbf1;
+}
+
+.navbar .blog-header-logo {
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.navbar a.gfd-nav-link {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+/* Older styles */
+
+.alert .alert-fa {
+    display: table-cell;
+    font-size: 30px;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+.alert div,
+.alert span {
+    display: table-cell;
+}
+

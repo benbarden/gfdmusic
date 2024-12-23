@@ -1,0 +1,77 @@
+{% extends 'layouts/base.twig' %}
+
+{% block layout_header_custom %}
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+{% endblock layout_header_custom %}
+
+{% block page_body %}
+
+    <h3 class="pb-4 mb-4 border-bottom">
+        {{ Release.name }}
+    </h3>
+
+    <div class="row">
+        <div class="col-8">
+            <table class="table">
+                <tr>
+                    <td>Type</td>
+                    <td>{{ Release.type }}</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>{{ Release.status }}</td>
+                </tr>
+                <tr>
+                    <td>Artist</td>
+                    <td>{{ Release.artist.name }}</td>
+                </tr>
+                <tr>
+                    <td>Release date</td>
+                    <td>{{ Release.release_date|date('M d, Y') }}</td>
+                </tr>
+                <tr>
+                    <td>Tracks</td>
+                    <td>{{ Release.releaseTracks|length }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col">
+            {% if Release.artwork_local_url %}
+                <img src="{{ Release.artwork_local_url }}" class="bd-placeholder-img" width="200" height="250" alt="Cover artwork for {{ Release.name }}">
+            {% endif %}
+        </div>
+    </div>
+
+    {% if SpotifyTrackId %}
+        <h2>Spotify</h2>
+        <div id="embed-iframe"></div>
+        <script>
+            window.onSpotifyIframeApiReady = (IFrameAPI) => {
+                const element = document.getElementById('embed-iframe');
+                const options = {
+                    uri: 'spotify:track:{{ SpotifyTrackId }}'
+                };
+                const callback = (EmbedController) => {};
+                IFrameAPI.createController(element, options, callback);
+            };
+        </script>
+        <p>
+            <a href="{{ Release.store_spotify_link }}">Open in Spotify</a>
+        </p>
+    {% endif %}
+
+    {% if Release.store_soundcloud_link %}
+        {# curl "https://soundcloud.com/oembed" -d 'format=json' -d 'url=https://soundcloud.com/gfdmusic/epic-journey' #}
+        <p>
+            <a href="{{ Release.store_soundcloud_link }}">Open in Soundcloud</a>
+        </p>
+    {% endif %}
+
+    {% if Release.blurb %}
+        <article class="blog-post">
+            {{ Release.blurb }}
+        </article>
+    {% endif %}
+
+
+{% endblock page_body %}

@@ -1,0 +1,22 @@
+{% extends 'layouts/base.twig' %}
+
+{% block layout_body %}
+<main>
+    <div class="container">
+        <h1>Register</h1>
+        {% include 'components/form-errors.twig' %}
+        <form method="post" action="{{ route('register') }}">
+            {{ csrf_field() }}
+            {% include 'auth/partials/register-form.twig' %}
+
+        </form>
+
+    </div>
+</main>
+
+<script>
+    $(function() {
+        $('#name').focus();
+    });
+</script>
+{% endblock layout_body %}

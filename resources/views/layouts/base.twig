@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>{% if TopTitle %}{{ TopTitle }} - GFD Music{% else %}GFD Music{% endif %}</title>
+
+    {% if APP_ENV == 'prod' %}
+        {% include 'components/ga.twig' %}
+    {% endif %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/assets/dist/js/jquery-3.7.0.min.js"></script>
+    <script src="/assets/js/copy-to-clipboard.js"></script>
+
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+
+    <link href="/assets/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/assets/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/assets/fontawesome/css/solid.css" rel="stylesheet">
+
+    <link href="/css/gfdmusic.css?v=241223" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C700%7CPoppins%3A400%2C500%2C600%2C700&#038;subset=latin%2Clatin-ext' rel='stylesheet' type='text/css' media='all' />
+    <!-- Custom styles for this template -->
+    <link href="/css/bootstrap-blog.css" rel="stylesheet">
+
+    {% block layout_header_custom %}{% endblock layout_header_custom %}
+</head>
+<body>
+
+<div class="container">
+
+    {#
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">GFD Music</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a id="nav-link-home" class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                {% if AuthUser %}
+                    <li class="nav-item">
+                        <a id="nav-link-user-dashboard" class="nav-link" href="{{ route('user.dashboard') }}">Dashboard</a>
+                    </li>
+                        {% if AuthUser.isStaff() %}
+                        <li class="nav-item">
+                            <a id="nav-link-staff-dashboard" class="nav-link" href="{{ route('staff.dashboard') }}">Staff</a>
+                        </li>
+                        {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a id="nav-link-login" class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-link-register" class="nav-link" href="{{ route('register') }}">Register</a>
+                    </li>
+                {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    #}
+
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="col-4 pt-1">
+                    <a class="blog-header-logo" href="/">GFD Music</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a class="gfd-nav-link" href="/">Home</a>
+                    <a class="gfd-nav-link" href="#">Catalogue</a>
+                    <a class="gfd-nav-link" href="#">About</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    {#
+                    <a class="link-secondary" href="#" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+                    </a>
+                    <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+                    #}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</div>
+
+<main class="container">
+
+    {% block layout_welcome %}
+        <div class="p-4 p-md-5 mb-4 gfd-bg-welcome">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4">The music of GFD</h1>
+                <p>
+                    GFD is a composer of many genres of music, including funk, dance, trance, electronic, ambient,
+                    along with tracks in the style of movie and videogame soundtracks.
+                    Starting out as an instrumental composer, many recent tracks have included vocal samples.
+                </p>
+                <p class="mb-0"><a href="#" class="fw-bold">Continue reading...</a></p>
+            </div>
+        </div>
+    {% endblock layout_welcome %}
+
+    {% block layout_featured %}
+    {% endblock layout_featured %}
+
+    <div class="row g-5">
+        <div class="col-md-8">
+            {% block page_body %}{% endblock page_body %}
+        </div>
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-light rounded">
+                    <h4>About</h4>
+                    <p class="mb-0">
+                        GFD is a composer of catchy, upbeat, funky music and trance. All tracks were instrumental
+                        up to and including our third album (Distant Destinations). After that, vocal samples have
+                        featured in most tracks.
+                    </p>
+                </div>
+
+                <div class="p-4">
+                    <h4>Music</h4>
+                    <ol class="list-unstyled mb-0">
+                        <li>Coming soon!</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    var currentPage = window.location.pathname;
+    switch (currentPage) {
+        case '/':
+            $('#nav-link-home').addClass('active');
+            break;
+        case '/login':
+            $('#nav-link-login').addClass('active');
+            break;
+        case '/register':
+            $('#nav-link-register').addClass('active');
+            break;
+        case '/user/dashboard':
+            $('#nav-link-user-dashboard').addClass('active');
+            break;
+        case '/staff/dashboard':
+            $('#nav-link-staff-dashboard').addClass('active');
+            break;
+    }
+</script>
+
+<footer class="blog-footer">
+    <p>
+        Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.
+    </p>
+    <p>
+        Copyright &copy; 2025 GFD Music.
+        <br>
+        <a href="#">Back to top</a>
+    </p>
+</footer>
+
+</body>
+</html>
