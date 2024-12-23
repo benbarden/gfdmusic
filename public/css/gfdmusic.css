@@ -13,7 +13,15 @@ body, footer, .navbar {
 }
 
 .gfd-bg-welcome {
-    background: #becbf1;
+    background-image: url("/assets/artwork/gfd/gfd-backdrop.jpg");
+    background-position: top center;
+    background-color: #becbf1;
+}
+
+.gfd-welcome-text {
+    background-color: #becbf1;
+    border-radius: 12px;
+    padding: 6px 12px;
 }
 
 .navbar .blog-header-logo {

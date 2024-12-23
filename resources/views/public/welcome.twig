@@ -10,10 +10,12 @@
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 {% if LatestRelease %}
                     <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success">Latest release</strong>
+                        <strong class="d-inline-block mb-2 text-success">Recent release</strong>
                         <h3 class="mb-0">{{ LatestRelease.name }}</h3>
                         <div class="mb-1 text-muted">Released: {{ LatestRelease.release_date|date('M d, Y') }}</div>
-                        <div class="mb-1 text-muted">Artist: {{ LatestRelease.artist.name }}</div>
+                        <div class="mb-1 text-muted">
+                            Artist: {{ LatestRelease.artist.name }}
+                        </div>
                         <p class="mb-auto"></p>
                         <a href="{{ route('release.show', {'releaseUrl': LatestRelease.url, 'artistUrl': LatestRelease.artist.url}) }}" class="stretched-link">Continue reading</a>
                     </div>

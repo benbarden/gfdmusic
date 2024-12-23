@@ -31,15 +31,18 @@ class LoadBaseArtistData extends Command
     public function handle()
     {
         $artist = new Artist;
-        $artist->name = 'GFD';
-        $artist->url = 'gfd';
-        $artist->social_threads_id = '@gfdmusic';
-        $artist->website_url = 'https://www.gfdmusic.com';
-        $artist->store_spotify_link = 'https://open.spotify.com/artist/6QyNK9na4rgC9TrQx0K3wE?si=U-mESuVwSbSSSIl31aYtlw&dl_branch=1';
-        $artist->store_soundcloud_link = 'https://soundcloud.com/gfdmusic';
-        $artist->store_youtube_link = 'https://music.youtube.com/channel/UCwZe1Xxl-LFN_CTsd3sVbIA?si=zo1ELJ6tU2TY1xys';
-        $artist->store_apple_link = 'https://music.apple.com/us/artist/gfd/1530319703';
-        $artist->store_amazon_link = 'https://amazon.co.uk/music/player/artists/B07FXZPBRH/gfd?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_ovyyibDtSYUVOQdaKcPzjNahr';
+        $values = [
+            'name' => 'GFD',
+            'url' => 'gfd',
+            'social_threads_id' => '@gfdmusic',
+            'website_url' => 'https://www.gfdmusic.com',
+            'store_spotify_link' => 'https://open.spotify.com/artist/6QyNK9na4rgC9TrQx0K3wE?si=U-mESuVwSbSSSIl31aYtlw&dl_branch=1',
+            'store_soundcloud_link' => 'https://soundcloud.com/gfdmusic',
+            'store_youtube_link' => 'https://music.youtube.com/channel/UCwZe1Xxl-LFN_CTsd3sVbIA?si=zo1ELJ6tU2TY1xys',
+            'store_apple_link' => 'https://music.apple.com/us/artist/gfd/1530319703',
+            'store_amazon_link' => 'https://amazon.co.uk/music/player/artists/B07FXZPBRH/gfd?marketplaceId=A1F83G8C2ARO7P&musicTerritory=GB&ref=dm_sh_ovyyibDtSYUVOQdaKcPzjNahr',
+        ];
+        $artist->fill($values);
         $artist->save();
 
         $track = new Track;

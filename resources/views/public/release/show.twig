@@ -23,7 +23,11 @@
                 </tr>
                 <tr>
                     <td>Artist</td>
-                    <td>{{ Release.artist.name }}</td>
+                    <td>
+                        <a href="{{ route('artist-profile.show', {'artistUrl': Release.artist.url}) }}">
+                            {{ Release.artist.name }}
+                        </a>
+                    </td>
                 </tr>
                 <tr>
                     <td>Release date</td>
@@ -41,6 +45,9 @@
             {% endif %}
         </div>
     </div>
+    {% if Release.blurb %}
+        {{ Release.blurb }}
+    {% endif %}
 
     <h3>Tracks</h3>
     {% if Release.releaseTracks|length %}

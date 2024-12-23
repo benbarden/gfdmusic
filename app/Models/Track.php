@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Track extends Model
@@ -18,5 +19,10 @@ class Track extends Model
     public function artist(): HasOne
     {
         return $this->hasOne(Artist::class, 'id', 'artist_id');
+    }
+
+    public function releaseTracks(): HasMany
+    {
+        return $this->hasMany(ReleaseTrack::class, 'track_id', 'id');
     }
 }

@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicSite\WelcomeController;
 use App\Http\Controllers\PublicSite\ReleaseController;
 use App\Http\Controllers\PublicSite\TrackController;
+use App\Http\Controllers\PublicSite\ArtistProfileController;
 
 use App\Http\Controllers\Staff\DashboardController as StaffDashboardController;
 
@@ -23,9 +24,11 @@ use App\Http\Controllers\Staff\DashboardController as StaffDashboardController;
 
 Route::get('/', [WelcomeController::class, 'show'])->name('welcome');
 
-Route::get('/{artistUrl}/release/{releaseUrl}', [ReleaseController::class, 'show'])->name('release.show');
+Route::get('/{artistUrl}/releases/{releaseUrl}', [ReleaseController::class, 'show'])->name('release.show');
 
-Route::get('/{artistUrl}/track/{trackUrl}', [TrackController::class, 'show'])->name('track.show');
+Route::get('/{artistUrl}/tracks/{trackUrl}', [TrackController::class, 'show'])->name('track.show');
+
+Route::get('/{artistUrl}', [ArtistProfileController::class, 'show'])->name('artist-profile.show');
 
 //Route::match(['get', 'post'], '/join-waiting-list', [WaitingListController::class, 'signup'])->name('join-waiting-list');
 

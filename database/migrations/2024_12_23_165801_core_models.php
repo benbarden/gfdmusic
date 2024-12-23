@@ -44,7 +44,7 @@ return new class extends Migration
             $table->text('store_bandcamp_link')->nullable();
             $table->timestamps();
 
-            $table->unique('url', 'url');
+            $table->unique(['artist_id', 'url'], 'url');
             $table->index('artist_id', 'artist_id');
         });
 
@@ -66,7 +66,7 @@ return new class extends Migration
             $table->text('store_bandcamp_link')->nullable();
             $table->timestamps();
 
-            $table->unique('url', 'url');
+            $table->unique(['artist_id', 'url'], 'url');
             $table->index('type', 'type');
             $table->index('status', 'status');
             $table->index('artist_id', 'artist_id');

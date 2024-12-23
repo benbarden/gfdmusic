@@ -10,6 +10,40 @@
         {{ Track.name }}
     </h3>
 
+    <div class="row">
+        <div class="col-8">
+            <table class="table">
+                <tr>
+                    <td>Artist</td>
+                    <td>
+                        <a href="{{ route('artist-profile.show', {'artistUrl': Track.artist.url}) }}">
+                            {{ Track.artist.name }}
+                        </a>
+                    </td>
+                </tr>
+                {% if Track.releaseTracks|length %}
+                <tr>
+                    <td>
+                        Appears on
+                    </td>
+                    <td>
+                        {% for item in Track.releaseTracks %}
+                            <a href="{{ route('release.show', {'artistUrl': Track.artist.url, 'releaseUrl': item.release.url}) }}">
+                                {{ item.release.name }}
+                            </a>
+                            <br>
+                        {% endfor %}
+                    </td>
+                </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+
+    {% if Track.blurb %}
+        {{ Track.blurb }}
+    {% endif %}
+
     {% if SpotifyTrackId %}
         <h2>Spotify</h2>
         <div id="embed-iframe"></div>
