@@ -32,11 +32,11 @@ class ReleaseController extends Controller
         if (!$release) abort(404);
 
         $storeSpotify = new Spotify;
-        $trackId = $storeSpotify->getTrackId($release->store_spotify_link);
+        $albumId = $storeSpotify->getAlbumId($release->store_spotify_link);
 
         $bindings = [];
         $bindings['Release'] = $release;
-        $bindings['SpotifyTrackId'] = $trackId;
+        $bindings['SpotifyAlbumId'] = $albumId;
 
         return view('public.release.show', $bindings);
     }

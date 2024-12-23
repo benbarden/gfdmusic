@@ -45,8 +45,11 @@
             {% endif %}
         </div>
     </div>
+
     {% if Release.blurb %}
-        {{ Release.blurb }}
+        <p>
+            {{ Release.blurb }}
+        </p>
     {% endif %}
 
     <h3>Tracks</h3>
@@ -73,14 +76,14 @@
         </p>
     {% endif %}
 
-    {% if SpotifyTrackId %}
+    {% if SpotifyAlbumId %}
         <h2>Spotify</h2>
         <div id="embed-iframe"></div>
         <script>
             window.onSpotifyIframeApiReady = (IFrameAPI) => {
                 const element = document.getElementById('embed-iframe');
                 const options = {
-                    uri: 'spotify:track:{{ SpotifyTrackId }}'
+                    uri: 'spotify:album:{{ SpotifyAlbumId }}'
                 };
                 const callback = (EmbedController) => {};
                 IFrameAPI.createController(element, options, callback);
@@ -98,11 +101,22 @@
         </p>
     {% endif %}
 
-    {% if Release.blurb %}
-        <article class="blog-post">
-            {{ Release.blurb }}
-        </article>
+    {% if Release.store_youtube_link %}
+        <p>
+            <a href="{{ Release.store_youtube_link }}">Open in YouTube Music</a>
+        </p>
     {% endif %}
 
+    {% if Release.store_amazon_link %}
+        <p>
+            <a href="{{ Release.store_amazon_link }}">Open in Amazon Music</a>
+        </p>
+    {% endif %}
+
+    {% if Release.store_apple_link %}
+        <p>
+            <a href="{{ Release.store_apple_link }}">Open in Apple Music</a>
+        </p>
+    {% endif %}
 
 {% endblock page_body %}

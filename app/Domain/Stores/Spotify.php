@@ -22,4 +22,17 @@ class Spotify
 
         return $trackId[0];
     }
+
+    public function getAlbumId($url)
+    {
+        if (!str_starts_with($url, 'https://open.spotify.com/album/')) return null;
+
+        $trackData = explode('https://open.spotify.com/album/', $url);
+
+        $trackLink = $trackData[1];
+
+        $trackId = explode('?', $trackLink);
+
+        return $trackId[0];
+    }
 }

@@ -9,6 +9,8 @@ use App\Models\Track;
 use App\Models\Release;
 use App\Models\ReleaseTrack;
 
+use League\Csv\Reader;
+
 class LoadBaseArtistData extends Command
 {
     /**
@@ -45,6 +47,70 @@ class LoadBaseArtistData extends Command
         $artist->fill($values);
         $artist->save();
 
+        // *** TRACKS *** //
+        $csv = Reader::createFromPath(storage_path('gfd-data-upload-tracks.csv'), 'r');
+        $csv->setHeaderOffset(0);
+
+        //$header = $csv->getHeader(); //returns the CSV header record
+
+        $records = $csv->getRecords();
+        foreach ($records as $record) {
+            $track = new Track;
+            $values = [
+                'name' => $record['name'],
+                'url' => $record['url'],
+                'artist_id' => $record['artist_id'],
+                'blurb' => $record['blurb'],
+                'store_spotify_link' => $record['store_spotify_link'],
+                'store_soundcloud_link' => $record['store_soundcloud_link'],
+            ];
+            $track->fill($values);
+            $track->save();
+        }
+
+        // *** RELEASES *** //
+        $csv = Reader::createFromPath(storage_path('gfd-data-upload-releases.csv'), 'r');
+        $csv->setHeaderOffset(0);
+
+        //$header = $csv->getHeader(); //returns the CSV header record
+
+        $records = $csv->getRecords();
+        foreach ($records as $record) {
+            $release = new Release;
+            $values = [
+                'name' => $record['name'],
+                'url' => $record['url'],
+                'artist_id' => $record['artist_id'],
+                'artwork_local_url' => $record['artwork_local_url'],
+                'blurb' => $record['blurb'],
+                'type' => $record['type'],
+                'status' => $record['status'],
+                'release_date' => $record['release_date'],
+                'store_spotify_link' => $record['store_spotify_link'],
+                'store_youtube_link' => $record['store_youtube_link'],
+                'store_apple_link' => $record['store_apple_link'],
+                'store_amazon_link' => $record['store_amazon_link'],
+                'store_soundcloud_link' => $record['store_soundcloud_link'],
+            ];
+            $release->fill($values);
+            $release->save();
+
+            $releaseId = $release->id;
+            $trackIds = explode(',', $record['track_ids']);
+            $trackNo = 1;
+            foreach ($trackIds as $id) {
+                $relTrack = new ReleaseTrack;
+                $values = [
+                    'release_id' => $releaseId,
+                    'track_id' => $id,
+                    'release_order' => $trackNo++
+                ];
+                $relTrack->fill($values);
+                $relTrack->save();
+            }
+        }
+
+        /*
         $track = new Track;
         $values = [
             'name' => 'Epic Journey',
@@ -78,5 +144,6 @@ class LoadBaseArtistData extends Command
         ];
         $relTrack1->fill($values);
         $relTrack1->save();
+        */
     }
 }
