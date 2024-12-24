@@ -4,6 +4,19 @@
     <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 {% endblock layout_header_custom %}
 
+{% set TopTitle = Track.name~' by '~Track.artist.name %}
+
+{% block layout_welcome %}
+    <div class="p-4 p-md-5 mb-4 gfd-bg-welcome">
+        <div class="gfd-welcome-text col-md-6">
+            <h1>{{ Track.name }}</h1>
+            <p>
+                A track by {{ Track.artist.name }}.
+            </p>
+        </div>
+    </div>
+{% endblock layout_welcome %}
+
 {% block page_body %}
 
     <h3 class="pb-4 mb-4 border-bottom">
