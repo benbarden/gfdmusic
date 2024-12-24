@@ -41,7 +41,9 @@
     </div>
 
     {% if Track.blurb %}
-        {{ Track.blurb }}
+        <p>
+            {{ Track.blurb }}
+        </p>
     {% endif %}
 
     {% if SpotifyTrackId %}
@@ -67,12 +69,6 @@
         <p>
             <a href="{{ Track.store_soundcloud_link }}">Open in Soundcloud</a>
         </p>
-    {% endif %}
-
-    {% if Track.blurb %}
-        <article class="blog-post">
-            {{ Track.blurb }}
-        </article>
     {% endif %}
 
 

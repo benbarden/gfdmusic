@@ -1,0 +1,34 @@
+{% if Release %}
+    <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 {{ HeaderStyle }}">{{ HeaderDesc }}</strong>
+        <h3 class="mb-0">{{ Release.name }}</h3>
+        <div class="mb-1 text-muted">Released: {{ Release.release_date|date('M d, Y') }}</div>
+        <div class="mb-1 text-muted">
+            Artist: {{ Release.artist.name }}
+        </div>
+        <p class="mb-auto"></p>
+        <a href="{{ route('release.show', {'releaseUrl': Release.url, 'artistUrl': Release.artist.url}) }}" class="stretched-link">More details</a>
+    </div>
+    <div class="col-auto d-none d-lg-block">
+        {% if Release.artwork_local_url %}
+            <img src="{{ Release.artwork_local_url }}" class="bd-placeholder-img" width="250" height="250" alt="Cover artwork for {{ Release.name }}">
+        {% else %}
+            <svg class="bd-placeholder-img" width="250" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"/>
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            </svg>
+        {% endif %}
+    </div>
+{% else %}
+    <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-danger">Error loading release.</strong>
+    </div>
+    <div class="col-auto d-none d-lg-block">
+        <svg class="bd-placeholder-img" width="250" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c"/>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+        </svg>
+    </div>
+{% endif %}

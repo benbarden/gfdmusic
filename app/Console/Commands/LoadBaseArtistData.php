@@ -81,7 +81,7 @@ class LoadBaseArtistData extends Command
                 'name' => $record['name'],
                 'url' => $record['url'],
                 'artist_id' => $record['artist_id'],
-                'artwork_local_url' => $record['artwork_local_url'],
+                'artwork_local_url' => '/assets/artwork/gfd/'.$record['artwork_local_url'],
                 'blurb' => $record['blurb'],
                 'type' => $record['type'],
                 'status' => $record['status'],

@@ -12,8 +12,18 @@ class Repo
         return Release::where('artist_id', $artist->id)->where('url', $url)->first();
     }
 
-    public function latest()
+    public function latestNotAlbum()
     {
         return Release::whereNotIn('type', [Release::TYPE_ALBUM])->orderBy('release_date', 'desc')->first();
+    }
+
+    public function latestAlbum()
+    {
+        return Release::where('type', Release::TYPE_ALBUM)->orderBy('release_date', 'desc')->first();
+    }
+
+    public function latestNotAlbumSkip($skipHowMany)
+    {
+        return Release::whereNotIn('type', [Release::TYPE_ALBUM])->orderBy('release_date', 'desc')->offset($skipHowMany)->limit(5)->get();
     }
 }

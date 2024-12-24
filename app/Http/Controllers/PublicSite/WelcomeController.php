@@ -19,10 +19,14 @@ class WelcomeController extends Controller
 
     public function show()
     {
-        $latestRelease = $this->repoRelease->latest();
+        $latestNotAlbum = $this->repoRelease->latestNotAlbum();
+        $latestAlbum = $this->repoRelease->latestAlbum();
+        $latestNotAlbumSkipFirst = $this->repoRelease->latestNotAlbumSkip(1);
 
         $bindings = [];
-        $bindings['LatestRelease'] = $latestRelease;
+        $bindings['LatestNotAlbum'] = $latestNotAlbum;
+        $bindings['LatestAlbum'] = $latestAlbum;
+        $bindings['LatestNotAlbumSkipFirst'] = $latestNotAlbumSkipFirst;
 
         return view('public.welcome', $bindings);
     }
