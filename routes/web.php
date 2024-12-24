@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PublicSite\WelcomeController;
+use App\Http\Controllers\PublicSite\AboutController;
 use App\Http\Controllers\PublicSite\ReleaseController;
 use App\Http\Controllers\PublicSite\TrackController;
 use App\Http\Controllers\PublicSite\ArtistProfileController;
@@ -22,7 +23,10 @@ use App\Http\Controllers\PublicSite\CatalogueController;
 
 Route::get('/', [WelcomeController::class, 'show'])->name('welcome');
 
-Route::get('/catalogue', [CatalogueController::class, 'show'])->name('catalogue');
+Route::get('/about', [AboutController::class, 'show'])->name('about');
+
+Route::get('/catalogue/tracks', [CatalogueController::class, 'tracks'])->name('catalogue.tracks');
+Route::get('/catalogue/releases', [CatalogueController::class, 'releases'])->name('catalogue.releases');
 
 Route::get('/{artistUrl}/releases/{releaseUrl}', [ReleaseController::class, 'show'])->name('release.show');
 

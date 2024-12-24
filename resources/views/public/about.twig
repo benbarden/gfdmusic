@@ -1,0 +1,90 @@
+{% extends 'layouts/base.twig' %}
+
+{% block layout_welcome %}
+    <div class="p-4 p-md-5 mb-4 gfd-bg-welcome">
+        <div class="gfd-welcome-text col-md-6">
+            <h1>About GFD</h1>
+            <p>
+                All about GFD.
+            </p>
+        </div>
+    </div>
+{% endblock layout_welcome %}
+
+{% block page_body %}
+
+    <h3 class="pb-4 mb-4 border-bottom">
+        An introduction to GFD
+    </h3>
+
+    <article class="blog-post">
+
+        <p>
+            GFD is a composer of catchy, upbeat, funky music and trance. All tracks were instrumental up to and
+            including our third album (<a href="{{ route('release.show', {'artistUrl': 'gfd', 'releaseUrl': 'distant-destinations'}) }}">Distant Destinations</a>).
+            After that, vocal samples have featured in most tracks.
+        </p>
+        <p>
+            The name “GFD” is derived from “Green Field Development” – though it should really be <a href="https://en.wikipedia.org/wiki/Greenfield_project" target="_blank">greenfield development</a>,
+            but then the name didn’t work so well.
+        </p>
+        <p>
+            It’s essentially about starting afresh, after years of writing music that you wouldn’t sit down and listen to,
+            let alone get up and dance to.
+        </p>
+
+        <h2>History of GFD</h2>
+
+        <p>
+            Way, way back in September 1995... I wrote my first proper song, called “Waiting for the Sun”. It’s a bit basic.
+        </p>
+        <p>
+            Fast-forward to 2005. I had a pile of about 100 unfinished tracks. Tired of never finishing anything, I wanted
+            enough tracks for an album. Over the next few years, I put together five albums, before taking a break in 2009.
+        </p>
+        <p>
+            In 2016, I decided to start music again under a new artist name – “GFD”. I did three more albums, then a remix
+            album, before writing two more albums under my own name. Eleven in total.
+            (Album 10 was called “Ten”, in case anyone lost count.)
+        </p>
+        <p>
+            It took me until 2020 to have another go. I had a go at mastering one of my tracks, added some basic artwork,
+            and uploaded it to stores. The track was approved, and it hit streaming services on September 18th, 2020.
+            My first <em>proper</em> release. Counting from 1995, it only took 25 years!
+        </p>
+        <p>
+            A truly epic journey... and the debut track was the aptly-titled
+            <a href="{{ route('release.show', {'artistUrl': 'gfd', 'releaseUrl': 'epic-journey'}) }}">Epic Journey</a>.
+            The journey continues... stay tuned for new releases.
+        </p>
+        <p>
+            <a href="https://threads.net/@gfdmusic">Follow gfdmusic on Threads</a>.
+        </p>
+
+        <h2>Roads to Atlantis</h2>
+
+        <p>
+            Before my first release in 2020, I wrote music that wouldn't be out of place on a videogame soundtrack, with
+            a handful tracks suiting the style of a movie soundtrack. This was especially true of the five albums
+            I worked on between 2005-2009.
+        </p>
+        <p>
+            Although a few tracks from this era have been re-released as GFD, in 2024 I started releasing this style
+            under a new name - "Roads to Atlantis".
+        </p>
+        <p>
+            For the time being, this alias exists only on Soundcloud and Bandcamp.
+        </p>
+
+        <h2>Who is GFD?</h2>
+
+        <p>
+            GFD is the brainchild of Ben Barden.
+        </p>
+        <p>
+            <a href="https://threads.net/@gfdmusic">Follow Ben on Threads</a>.
+        </p>
+
+    </article>
+
+{% endblock page_body %}

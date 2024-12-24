@@ -99,10 +99,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="col-12">
-                    <a class="blog-header-logo" href="/">GFD Music</a>
-                    <a class="gfd-nav-link" href="/">Home</a>
-                    <a class="gfd-nav-link" href="{{ route('catalogue') }}">Catalogue</a>
-                    <a class="gfd-nav-link" href="#">About</a>
+                    <a class="blog-header-logo" href="{{ route('welcome') }}">GFD Music</a>
+                    <a class="gfd-nav-link" href="{{ route('welcome') }}">Home</a>
+                    <a class="gfd-nav-link" href="{{ route('catalogue.releases') }}">Releases</a>
+                    <a class="gfd-nav-link" href="{{ route('catalogue.tracks') }}">All tracks</a>
+                    <a class="gfd-nav-link" href="{{ route('about') }}">About</a>
                 </div>
             </div>
         </div>
@@ -117,11 +118,11 @@
             <div class="gfd-welcome-text col-md-6">
                 <h1>The music of GFD</h1>
                 <p>
-                    GFD is a composer of many genres of music, including funk, dance, trance, electronic, ambient,
-                    along with tracks in the style of movie and videogame soundtracks.
-                    Starting out as an instrumental composer, many recent tracks have included vocal samples.
+                    GFD is a composer of catchy, upbeat, funky music and trance. All tracks were instrumental
+                    up to and including our third album (Distant Destinations). After that, vocal samples have
+                    featured in most tracks.
                 </p>
-                <p class="mb-0"><a href="#" class="fw-bold">Continue reading...</a></p>
+                <p class="mb-0"><a href="{{ route('about') }}" class="fw-bold">Read more about GFD</a>.</p>
             </div>
         </div>
     {% endblock layout_welcome %}
@@ -135,21 +136,23 @@
         </div>
         <div class="col-md-4">
             <div class="position-sticky" style="top: 2rem;">
-                <div class="p-4 mb-3 bg-light rounded">
-                    <h4>About</h4>
-                    <p class="mb-0">
-                        GFD is a composer of catchy, upbeat, funky music and trance. All tracks were instrumental
-                        up to and including our third album (Distant Destinations). After that, vocal samples have
-                        featured in most tracks.
-                    </p>
-                </div>
 
-                <div class="p-4">
+                <div class="p-4 mb-3 bg-light rounded">
                     <h4>Music</h4>
                     <ol class="list-unstyled mb-0">
-                        <li>Coming soon!</li>
+                        <li><a href="{{ route('catalogue.releases') }}">Releases</a> (Albums, EPs, and singles)</li>
+                        <li><a href="{{ route('catalogue.tracks') }}">All tracks</a></li>
+                        <li><a href="{{ route('artist-profile.show', {'artistUrl': 'gfd'}) }}">GFD artist profile</a></li>
                     </ol>
                 </div>
+
+                <div class="p-4 mb-3 bg-light rounded">
+                    <h4>More details</h4>
+                    <ol class="list-unstyled mb-0">
+                        <li><a href="{{ route('about') }}">About GFD</a></li>
+                    </ol>
+                </div>
+
             </div>
         </div>
     </div>

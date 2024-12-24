@@ -47,6 +47,15 @@ class LoadBaseArtistData extends Command
         $artist->fill($values);
         $artist->save();
 
+        $artist = new Artist;
+        $values = [
+            'name' => 'Roads to Atlantis',
+            'url' => 'roads-to-atlantis',
+            'store_bandcamp_link' => 'https://roadstoatlantis.bandcamp.com/',
+        ];
+        $artist->fill($values);
+        $artist->save();
+
         // *** TRACKS *** //
         $csv = Reader::createFromPath(storage_path('gfd-data-upload-tracks.csv'), 'r');
         $csv->setHeaderOffset(0);
@@ -76,12 +85,20 @@ class LoadBaseArtistData extends Command
 
         $records = $csv->getRecords();
         foreach ($records as $record) {
+
+            $artistId = $record['artist_id'];
+            if ($artistId == 2) {
+                $artworkPath = '/assets/artwork/roads-to-atlantis/';
+            } else {
+                $artworkPath = '/assets/artwork/gfd/';
+            }
+
             $release = new Release;
             $values = [
                 'name' => $record['name'],
                 'url' => $record['url'],
                 'artist_id' => $record['artist_id'],
-                'artwork_local_url' => '/assets/artwork/gfd/'.$record['artwork_local_url'],
+                'artwork_local_url' => $artworkPath.$record['artwork_local_url'],
                 'blurb' => $record['blurb'],
                 'type' => $record['type'],
                 'status' => $record['status'],
@@ -91,6 +108,7 @@ class LoadBaseArtistData extends Command
                 'store_apple_link' => $record['store_apple_link'],
                 'store_amazon_link' => $record['store_amazon_link'],
                 'store_soundcloud_link' => $record['store_soundcloud_link'],
+                'store_bandcamp_link' => $record['store_bandcamp_link'],
             ];
             $release->fill($values);
             $release->save();

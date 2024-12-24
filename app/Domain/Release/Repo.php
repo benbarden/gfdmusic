@@ -12,6 +12,11 @@ class Repo
         return Release::where('artist_id', $artist->id)->where('url', $url)->first();
     }
 
+    public function releaseList()
+    {
+        return Release::orderBy('release_date', 'desc')->get();
+    }
+
     public function latestNotAlbum()
     {
         return Release::whereNotIn('type', [Release::TYPE_ALBUM])->orderBy('release_date', 'desc')->first();

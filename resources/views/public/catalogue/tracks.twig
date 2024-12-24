@@ -1,15 +1,22 @@
 {% extends 'layouts/base.twig' %}
 
-{% block layout_header_custom %}
+{% block layout_welcome %}
+    <div class="p-4 p-md-5 mb-4 gfd-bg-welcome">
+        <div class="gfd-welcome-text col-md-6">
+            <h1>Tracks</h1>
+            <p>
+                A list of all the tracks on the site.
+            </p>
+        </div>
+    </div>
+{% endblock layout_welcome %}
 
-{% endblock layout_header_custom %}
-
-{% set TopTitle = "Catalogue" %}
+{% set TopTitle = "All tracks" %}
 
 {% block page_body %}
 
     <h3 class="pb-4 mb-4 border-bottom">
-        Catalogue
+        All tracks
     </h3>
 
     <div class="row">

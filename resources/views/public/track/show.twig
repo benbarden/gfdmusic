@@ -73,14 +73,14 @@
             };
         </script>
         <p>
-            <a href="{{ Track.store_spotify_link }}">Open in Spotify</a>
+            <a href="{{ Track.store_spotify_link }}">Spotify</a>
         </p>
     {% endif %}
 
     {% if Track.store_soundcloud_link %}
         {# curl "https://soundcloud.com/oembed" -d 'format=json' -d 'url=https://soundcloud.com/gfdmusic/epic-journey' #}
         <p>
-            <a href="{{ Track.store_soundcloud_link }}">Open in Soundcloud</a>
+            <a href="{{ Track.store_soundcloud_link }}">Soundcloud</a>
         </p>
     {% endif %}
 

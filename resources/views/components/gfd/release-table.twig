@@ -1,0 +1,38 @@
+{% if Releases|length %}
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Release name</th>
+                    <th>Artist</th>
+                    <th>Type</th>
+                    <th>Release date</th>
+                    <th>Tracks</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in Releases %}
+                    <tr>
+                        <td>
+                            <a href="{{ route('release.show', {'artistUrl': item.artist.url, 'releaseUrl': item.url}) }}">
+                                {{ item.name }}
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ route('artist-profile.show', {'artistUrl': item.artist.url}) }}">
+                                {{ item.artist.name }}
+                            </a>
+                        </td>
+                        <td>{{ item.type }}</td>
+                        <td>{{ item.release_date|date('M d, Y') }}</td>
+                        <td>{{ item.releaseTracks|length }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% else %}
+    <p>No releases to display.</p>
+{% endif %}

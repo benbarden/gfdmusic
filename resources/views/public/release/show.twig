@@ -11,7 +11,12 @@
         <div class="gfd-welcome-text col-md-6">
             <h1>{{ Release.name }}</h1>
             <p>
-                A {{ Release.releaseTracks|length }}-track {{ Release.type }} by {{ Release.artist.name }}.
+            {% if Release.type == 'Single' %}
+                A single
+            {% else %}
+                A {{ Release.releaseTracks|length }}-track {{ Release.type }}
+            {% endif %}
+                by {{ Release.artist.name }}.
                 Released on {{ Release.release_date|date('M d, Y') }}.
             </p>
         </div>
@@ -111,25 +116,31 @@
     {% if Release.store_soundcloud_link %}
         {# curl "https://soundcloud.com/oembed" -d 'format=json' -d 'url=https://soundcloud.com/gfdmusic/epic-journey' #}
         <p>
-            <a href="{{ Release.store_soundcloud_link }}">Open in Soundcloud</a>
+            <a href="{{ Release.store_soundcloud_link }}">Soundcloud</a>
         </p>
     {% endif %}
 
     {% if Release.store_youtube_link %}
         <p>
-            <a href="{{ Release.store_youtube_link }}">Open in YouTube Music</a>
+            <a href="{{ Release.store_youtube_link }}">YouTube Music</a>
         </p>
     {% endif %}
 
     {% if Release.store_amazon_link %}
         <p>
-            <a href="{{ Release.store_amazon_link }}">Open in Amazon Music</a>
+            <a href="{{ Release.store_amazon_link }}">Amazon Music</a>
         </p>
     {% endif %}
 
     {% if Release.store_apple_link %}
         <p>
-            <a href="{{ Release.store_apple_link }}">Open in Apple Music</a>
+            <a href="{{ Release.store_apple_link }}">Apple Music</a>
+        </p>
+    {% endif %}
+
+    {% if Release.store_bandcamp_link %}
+        <p>
+            <a href="{{ Release.store_bandcamp_link }}">Bandcamp</a>
         </p>
     {% endif %}
 
