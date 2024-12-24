@@ -1,0 +1,40 @@
+{% extends 'layouts/base.twig' %}
+
+{% block layout_header_custom %}
+
+{% endblock layout_header_custom %}
+
+{% block page_body %}
+
+    <h3 class="pb-4 mb-4 border-bottom">
+        Catalogue
+    </h3>
+
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Track</th>
+                    <th>Artist</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in Tracks %}
+                    <tr>
+                        <td>
+                            <a href="{{ route('track.show', {'trackUrl': item.url, 'artistUrl': item.artist.url}) }}">
+                                {{ item.name }}
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ route('artist-profile.show', {'artistUrl': item.artist.url}) }}">
+                                {{ item.artist.name }}
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock page_body %}
