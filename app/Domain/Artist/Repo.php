@@ -10,4 +10,9 @@ class Repo
     {
         return Artist::where('url', $url)->first();
     }
+
+    public function byName($name)
+    {
+        return Artist::where('name', $name)->first();
+    }
 }
