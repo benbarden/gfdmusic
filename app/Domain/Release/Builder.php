@@ -88,6 +88,12 @@ class Builder
         return $this;
     }
 
+    public function setTypeSingle()
+    {
+        $this->release->type = ReleaseType::TYPE_SINGLE;
+        return $this;
+    }
+
     public function setStatusLive()
     {
         $this->release->status = ReleaseStatus::STATUS_LIVE;
