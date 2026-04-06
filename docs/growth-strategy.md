@@ -122,6 +122,7 @@ Currently Bandcamp-only. Could expand, but adds complexity. Low priority for now
 - [ ] "Story" pages for key releases (not just links)
 - [ ] Blog/news section (or link to Substack)
 - [ ] Consider which legacy GFD releases to keep/archive
+- [ ] Track descriptions: add formatting support (markdown or paragraph breaks)
 
 ---
 

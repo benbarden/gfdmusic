@@ -64,3 +64,8 @@ New releases are added via dedicated artisan commands (e.g., `LoadRelease027`) t
 - `PublicSite/`: Public pages (Welcome, Release, Track, Artist, Catalogue)
 - `Staff/`: Admin dashboard (auth protected via `auth.staff` middleware)
 - `Auth/`: Laravel Breeze authentication
+
+## Writing style
+
+- Use sentence case for headings, not Title Case
+- Artist names are proper nouns and keep their capitalisation

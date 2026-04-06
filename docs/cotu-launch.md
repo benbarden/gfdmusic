@@ -26,9 +26,29 @@ Keeping the first release quiet to make sure distribution goes smoothly. No big 
 
 ## Future Releases
 
-Backlog to sort into CotU vs GFD:
-- Up All Night (CotU candidate - nearly ready)
-- ~28 other finished tracks
+### Album: Terraform (working title)
+
+Potential track listing:
+1. Jupiter
+2. Dark Secrets
+3. Sun Rising
+4. Up All Night
+5. Out of Time
+6. Constellations
+7. Winter Dawn
+8. Lonely Planet
+9. Oceans in Space
+10. Alone in the Night
+11. Endless Road
+
+Notes:
+- Jupiter releasing as single first (2026-04-10)
+- Terraform artwork: variant of CotU artist image (towers/cosmos)
+- Most tracks from FAWM 2026 or CotU WIP folder
+
+### Backlog
+
+Other tracks to sort into CotU vs GFD - see track-catalogue.md
 
 ## Artist Profiles
 
