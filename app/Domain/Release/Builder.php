@@ -52,6 +52,7 @@ class Builder
         match ($artist->name) {
             'GFD' => $this->artworkPath = ArtworkPath::PATH_GFD,
             'Roads to Atlantis' => $this->artworkPath = ArtworkPath::PATH_RTA,
+            'Castles of the Underground' => $this->artworkPath = ArtworkPath::PATH_COTU,
             default => throw new \Exception('Unhandled artist: '.$artist->name),
         };
         $this->release->artist_id = $artist->id;

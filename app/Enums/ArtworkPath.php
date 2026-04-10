@@ -6,4 +6,5 @@ enum ArtworkPath
 {
     const PATH_GFD = '/assets/artwork/gfd/';
     const PATH_RTA = '/assets/artwork/roads-to-atlantis/';
+    const PATH_COTU = '/assets/artwork/castles-of-the-underground/';
 }
