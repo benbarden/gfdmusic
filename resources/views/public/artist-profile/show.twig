@@ -19,6 +19,15 @@
     Artist profile: {{ Artist.name }}
 </h3>
 
+<div class="d-flex mb-4">
+    <img src="/assets/artist-logos/{{ Artist.url }}-800x800.jpg" alt="{{ Artist.name }}" class="me-4" style="width: 150px; height: 150px;">
+    <div>
+        {% if Artist.bio %}
+            {{ Artist.bio|nl2br }}
+        {% endif %}
+    </div>
+</div>
+
 <h2>Quick stats</h2>
 
 <div class="row">
@@ -69,115 +78,84 @@
 
 <h2>Links</h2>
 
+{% set hasSocialLinks = Artist.social_threads_id or Artist.social_bluesky_id or Artist.social_twitter_id %}
+{% set hasStoreLinks = Artist.store_spotify_link or Artist.store_soundcloud_link or Artist.store_youtube_link or Artist.store_apple_link or Artist.store_amazon_link or Artist.store_bandcamp_link %}
+
 <div class="row">
     <div class="col-8">
         <table class="table">
             <tr>
                 <th colspan="2">Social links</th>
             </tr>
+            {% if hasSocialLinks %}
+                {% if Artist.social_threads_id %}
+                <tr>
+                    <td>Threads</td>
+                    <td><a href="https://threads.net/{{ Artist.social_threads_id }}" target="_blank">{{ Artist.social_threads_id }}</a></td>
+                </tr>
+                {% endif %}
+                {% if Artist.social_bluesky_id %}
+                <tr>
+                    <td>Bluesky</td>
+                    <td><a href="https://bsky.app/profile/{{ Artist.social_bluesky_id }}" target="_blank">{{ Artist.social_bluesky_id }}</a></td>
+                </tr>
+                {% endif %}
+                {% if Artist.social_twitter_id %}
+                <tr>
+                    <td>Twitter/X</td>
+                    <td><a href="https://x.com/{{ Artist.social_twitter_id }}" target="_blank">{{ Artist.social_twitter_id }}</a></td>
+                </tr>
+                {% endif %}
+            {% else %}
             <tr>
-                <td>Threads</td>
-                <td>
-                    {% if Artist.social_threads_id %}
-                        <a href="https://threads.net/{{ Artist.social_threads_id }}" target="_blank">{{ Artist.social_threads_id }}</a>
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
+                <td colspan="2">Coming soon.</td>
             </tr>
-            <tr>
-                <td>Bluesky</td>
-                <td>
-                    {% if Artist.social_bluesky_id %}
-                        <a href="https://bsky.app/profile/{{ Artist.social_bluesky_id }}" target="_blank">{{ Artist.social_bluesky_id }}</a>
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <td>Twitter/X</td>
-                <td>
-                    {% if Artist.social_twitter_id %}
-                        <a href="https://x.com/{{ Artist.social_twitter_id }}" target="_blank">{{ Artist.social_twitter_id }}</a>
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <td>Website URL</td>
-                <td>
-                    {% if Artist.website_url %}
-                        <a href="{{ Artist.website_url }}" target="_blank">Visit website</a>
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
-            </tr>
+            {% endif %}
             <tr>
                 <th colspan="2">Store links</th>
             </tr>
+            {% if hasStoreLinks %}
+                {% if Artist.store_spotify_link %}
+                <tr>
+                    <td>Spotify</td>
+                    <td><a href="{{ Artist.store_spotify_link }}" target="_blank">Spotify</a></td>
+                </tr>
+                {% endif %}
+                {% if Artist.store_soundcloud_link %}
+                <tr>
+                    <td>Soundcloud</td>
+                    <td><a href="{{ Artist.store_soundcloud_link }}" target="_blank">Soundcloud</a></td>
+                </tr>
+                {% endif %}
+                {% if Artist.store_youtube_link %}
+                <tr>
+                    <td>Youtube Music</td>
+                    <td><a href="{{ Artist.store_youtube_link }}" target="_blank">Youtube Music</a></td>
+                </tr>
+                {% endif %}
+                {% if Artist.store_apple_link %}
+                <tr>
+                    <td>Apple Music</td>
+                    <td><a href="{{ Artist.store_apple_link }}" target="_blank">Apple Music</a></td>
+                </tr>
+                {% endif %}
+                {% if Artist.store_amazon_link %}
+                <tr>
+                    <td>Amazon Music</td>
+                    <td><a href="{{ Artist.store_amazon_link }}" target="_blank">Amazon Music</a></td>
+                </tr>
+                {% endif %}
+                {% if Artist.store_bandcamp_link %}
+                <tr>
+                    <td>Bandcamp</td>
+                    <td><a href="{{ Artist.store_bandcamp_link }}" target="_blank">Bandcamp</a></td>
+                </tr>
+                {% endif %}
+            {% else %}
             <tr>
-                <td>Spotify</td>
-                <td>
-                    {% if Artist.store_spotify_link %}
-                        <a href="{{ Artist.store_spotify_link }}" target="_blank">Spotify</a>
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
+                <td colspan="2">Coming soon.</td>
             </tr>
-            <tr>
-                <td>Soundcloud</td>
-                <td>
-                    {% if Artist.store_soundcloud_link %}
-                        <a href="{{ Artist.store_soundcloud_link }}" target="_blank">Soundcloud</a>
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <td>Youtube Music</td>
-                <td>
-                    {% if Artist.store_youtube_link %}
-                        <a href="{{ Artist.store_youtube_link }}" target="_blank">Youtube Music</a>
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <td>Apple Music</td>
-                <td>
-                    {% if Artist.store_apple_link %}
-                        <a href="{{ Artist.store_apple_link }}" target="_blank">Apple Music</a>
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <td>Amazon Music</td>
-                <td>
-                    {% if Artist.store_amazon_link %}
-                        <a href="{{ Artist.store_amazon_link }}" target="_blank">Amazon Music</a>
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
-            </tr>
-            <tr>
-                <td>Bandcamp</td>
-                <td>
-                    {% if Artist.store_bandcamp_link %}
-                        <a href="{{ Artist.store_bandcamp_link }}" target="_blank">Bandcamp</a>
-                    {% else %}
-                        -
-                    {% endif %}
-                </td>
-            </tr>
+            {% endif %}
         </table>
     </div>
 </div>
