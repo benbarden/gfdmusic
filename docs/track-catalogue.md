@@ -39,19 +39,20 @@ GFD 6th album used fewer vocal samples as a result but wasn't submitted to Youtu
 
 | Track | Status | Soundcloud Performance | Notes |
 |-------|--------|------------------------|-------|
-| Jupiter | Released | - | First CotU release, 2026-04-10 |
-| Up All Night | WIP | - | Nearly ready. From FAWM 2026. |
 | Alone in the Night | WIP | - | |
 | Constellations | WIP | - | From FAWM 2026. |
 | Dark Secrets | WIP | - | From FAWM 2026. |
 | Departure (Remix) | WIP | - | Trance remix. |
-| Greater Good | WIP | - | |
-| Lonely Planet | WIP | - | From FAWM 2026. |
-| Out of Time | WIP | 628 | Instrumental. From FAWM 2026. On SC top 20. |
-| Sun Rising | WIP | - | |
-| Winter Dawn | WIP | - | From FAWM 2026. |
-| Oceans in Space | Soundcloud Test | - | New track, 2026-04-06. |
 | Endless Road | Soundcloud Test | 270 | Instrumental. For Terraform album. |
+| Greater Good | WIP | - | |
+| Jupiter | Released | - | First CotU release, 2026-04-10 |
+| Lonely Planet | WIP | - | From FAWM 2026. |
+| Oceans in Space | Soundcloud Test | - | New track, 2026-04-06. |
+| Out of Time | WIP | 628 | Instrumental. From FAWM 2026. On SC top 20. |
+| Starlight | WIP | - | |
+| Sun Rising | WIP | - | |
+| Up All Night | WIP | - | Nearly ready. From FAWM 2026. |
+| Winter Dawn | WIP | - | From FAWM 2026. |
 
 ### GFD
 
@@ -67,8 +68,6 @@ GFD 6th album used fewer vocal samples as a result but wasn't submitted to Youtu
 
 | Track | Status | Soundcloud Performance | Notes |
 |-------|--------|------------------------|-------|
-| Sentry | Soundcloud Test | 1027 | Instrumental, psy trance. Unusual style but popular. |
-| This is Real Love | Soundcloud Test | 315 | Vocals but demo quality. |
 | 3am Vibe | WIP | - | |
 | After Hours | WIP | - | |
 | Amsterdam | WIP | - | |
@@ -87,13 +86,16 @@ GFD 6th album used fewer vocal samples as a result but wasn't submitted to Youtu
 | Mostly Not | WIP | - | |
 | Neon Harmonies | WIP | - | |
 | Organ Donor | WIP | - | |
-| Reborn | WIP | - | |
+| Reborn | Soundcloud Test | - | Instrumental version of Alive. Piano replaces vocals. |
 | Rolling | WIP | - | |
+| Sentry | Soundcloud Test | 1027 | Instrumental, psy trance. Unusual style but popular. |
+| Sidestepper | WIP | - | |
 | Spinner | WIP | - | |
 | Still | WIP | - | |
 | Summer Vibes | WIP | - | |
 | Terminator | WIP | - | |
 | The Drug, The Remedy | WIP | - | |
+| This is Real Love | Soundcloud Test | 315 | Vocals but demo quality. |
 | Warped Melody | WIP | - | |
 | We Come in Peace | WIP | - | |
 
@@ -147,6 +149,7 @@ GFD 6th album used fewer vocal samples as a result but wasn't submitted to Youtu
 | Track | Status | Notes |
 |-------|--------|-------|
 | Ancient Scripture | WIP | |
+| Multiverse | WIP | |
 | Apocrypha (Remix) | WIP | |
 | Boss Stage | WIP | |
 | Celtic Horizon | WIP | |
@@ -162,6 +165,13 @@ GFD 6th album used fewer vocal samples as a result but wasn't submitted to Youtu
 | The Grand Hall | WIP | |
 | The Library | WIP | |
 | Wild Berries | WIP | |
+
+**WIP (from Remixed Pre-GFD folder):**
+
+| Track | Status | Notes |
+|-------|--------|-------|
+| Gravity | WIP | |
+| Nebular Dreams | WIP | |
 
 **Archive (not yet catalogued):**
 

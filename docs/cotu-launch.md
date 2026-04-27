@@ -59,4 +59,12 @@ Both use same white sans-serif typography - cohesive brand established.
 
 ---
 
-*Last updated: 2026-03-15*
+## Paid Promotions
+
+| Date | Service | Track | Cost | Status | Results |
+|------|---------|-------|------|--------|---------|
+| 2026-04-12 | GPM Music Group | Jupiter | £49 | Awaiting playlist placements | — |
+
+---
+
+*Last updated: 2026-04-12*
