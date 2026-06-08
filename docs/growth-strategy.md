@@ -18,7 +18,7 @@ Working document for thinking through site growth, content strategy, and artist 
 
 | Artist | Genre | Platforms | Status |
 |--------|-------|-----------|--------|
-| **Castles of the Underground** | Dance (main focus) | Spotify, streaming | NEW - fresh start |
+| **Castles of the Underground** | Dance (main focus) | Spotify, streaming | LIVE - Jupiter & Sun Rising released |
 | **GFD** | Funk | Spotify | Continuing, slower pace (29 releases, legacy) |
 | **Roads to Atlantis** | Experimental / videogame | Bandcamp (+ Spotify TBD) | Niche |
 
@@ -32,23 +32,11 @@ Working document for thinking through site growth, content strategy, and artist 
 
 ### Artwork
 
-The "Terraform" image works perfectly as the **Castles of the Underground** artist image:
-- Crumbling towers against cosmos
-- Lone figure, mysterious, underground but expansive
-- Says "electronic music with depth"
-- Terraform album can use a variant
+CotU artist image is in place. The plan is to repurpose it as a variant for the Terraform album when that's ready — not urgent given the album is a long way off.
 
-File: `gfd-terraform.jpg` (to be repurposed)
+### Track Assignment
 
-### Track Sorting Rules
-
-Not every track needs to be genre-pure. **Albums have arcs.**
-
-- **CotU albums** = dance-forward, but with dynamics (chilled closers, vocal variety, interludes)
-- **GFD** = funk + whatever feels right
-- **RtA** = the truly weird / videogame / experimental
-
-Soundtrack-esque tracks can work anywhere depending on context.
+Track assignment to CotU / GFD / RtA is an ongoing per-track decision, not a one-off sort. A track's direction can shift during production (a remix might become more CotU; a new track could go anywhere). Treat each release decision individually.
 
 ### Legacy Cleanup (Optional)
 
@@ -70,15 +58,20 @@ Some older GFD releases may be worth removing from Spotify if they don't represe
 | X | @benbarden | ? | Dormant |
 | Instagram | @gfdmusic | Label | Cross-post visuals/artwork |
 | Spotify | GFD | Funk artist | Continuing |
-| Spotify | Castles of the Underground | Dance artist | **NEW - to create** |
+| Spotify | Castles of the Underground | Dance artist | LIVE |
 | Bandcamp | Roads to Atlantis | Experimental | Continuing |
 
 **Strategy**: Post actively on Threads (@benbarden). Cross-post releases to others. Drive traffic to gfdmusic.com.
 
+**Social traction**: Some posting done but no clear traction yet. Self-promo is slow to get going. Sun Rising not yet announced on Threads or Substack.
+
+### Substack
+
+Exists with 3 posts. Not yet in a writing rhythm. Goal: one post per release as a sustainable minimum. Sun Rising is the natural next post.
+
 ### Content Assets
 
-- ~30 finished unreleased tracks (to be sorted across CotU / GFD)
-- ~30 works in progress
+- Backlog of finished and in-progress tracks — assigned to CotU / GFD / RtA on a per-track basis as they develop
 - GFD: 29 releases, 96 tracks (Sept 2020 - present)
 - Roads to Atlantis catalogue (Bandcamp)
 
@@ -86,30 +79,7 @@ Some older GFD releases may be worth removing from Spotify if they don't represe
 
 ## Open Questions
 
-### 1. Substack: Yes or No?
-
-**Case for a gfdmusic Substack**:
-- Behind-the-scenes content (production notes, creative process)
-- Unreleased track exclusives for subscribers
-- Album release storytelling
-- Email list = owned audience
-
-**Case against**:
-- Another thing to maintain
-- Could just add a blog to gfdmusic.com instead
-
-**Middle ground**: Start occasional (monthly?), see if it resonates.
-
-### 2. Backlog Release Strategy
-
-30 finished tracks across CotU and GFD. Options:
-
-- **Drip singles** (1-2/month) — algorithmic presence
-- **Bundle into albums** — more impactful, better storytelling
-- **Substack/site exclusives first** — incentive for signups
-- **Combination** — exclusives → later Spotify
-
-### 3. RtA on Spotify?
+### 1. RtA on Spotify?
 
 Currently Bandcamp-only. Could expand, but adds complexity. Low priority for now.
 
@@ -117,8 +87,8 @@ Currently Bandcamp-only. Could expand, but adds complexity. Low priority for now
 
 ## Site Improvements
 
-- [ ] Add Castles of the Underground as artist
-- [ ] Email signup (release notifications)
+- [x] Add Castles of the Underground as artist
+- [ ] Email signup (release notifications) — **highest value, builds owned audience**
 - [ ] "Story" pages for key releases (not just links)
 - [ ] Blog/news section (or link to Substack)
 - [ ] Consider which legacy GFD releases to keep/archive
@@ -126,15 +96,12 @@ Currently Bandcamp-only. Could expand, but adds complexity. Low priority for now
 
 ---
 
-## Next Steps
+## Next Actions
 
-1. **Create Castles of the Underground on Spotify** (when first release is ready)
-2. **Repurpose Terraform artwork** for CotU artist image
-3. **Sort backlog tracks** into CotU vs GFD buckets
-4. **Plan first CotU release** — single or album?
-5. **Update gfdmusic.com** to add CotU as an artist
-6. Decide on Substack (can wait)
+1. **Post about Sun Rising** — Substack and/or Threads. Release is live but unannounced.
+2. **Establish Substack rhythm** — one post per release is the target bar.
+3. **Email signup** — pick this as the next site improvement.
 
 ---
 
-*Last updated: March 2026*
+*Last updated: June 2026*
